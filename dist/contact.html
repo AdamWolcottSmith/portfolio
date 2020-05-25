@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact Adam Wolcott Smith</title>
+  </head>
+
+  <!-- body -->
+
+  <body class="contact">
+    <nav>
+      <ul class="nav">
+        <li class="nav__item">
+          <a href="work.html" class="nav__link">Work</a>
+        </li>
+        <li class="nav__item">
+          <a href="about.html" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="contact.html" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+        <!-- header -->
+
+        <header class="header">
+          <div class="header__slidout">
+            <h1 class="header__title">
+              <a href="index.html" class="homelink">
+                Adam <br />
+              Wolcott <br />
+              Smith
+              </a>
+            </h1>
+        </header>
+
+    <!-- contact -->
+
+    <div class="contact__container">
+      <form action="action_page.php" class="contact__form">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          class="contact__form--fname"
+          name="firstname"
+          placeholder="Brian"
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          class="contact__form--lname"
+          name="lastname"
+          placeholder="Eno"
+        />
+
+        <label for="country">Email</label>
+        <input
+          type="text"
+          class="contact__form--email"
+          name="email"
+          placeholder="brian@eno.com"
+        />
+
+        <label for="subject">Subject</label>
+        <textarea
+          class="contact__form--subject"
+          name="subject"
+          placeholder="Write something.."
+        ></textarea>
+
+        <input class="contact__form--submit" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

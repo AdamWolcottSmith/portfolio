@@ -81,6 +81,9 @@ body {
   background-color: $primary-color;
   display: flex;
   flex-flow: column wrap;
+}
+
+.main {
   @include desktop {
     flex-flow: row wrap;
     justify-content: center;
@@ -145,6 +148,13 @@ body {
   .nav__link:hover {
     background-color: $accent-color;
   }
+
+  .nav__link:active:before,
+  .nav__link:active:after {
+    opacity: 1;
+    transform: translateX(0px);
+    background-color: $accent-color;
+  }
 }
 
 // header
@@ -175,6 +185,28 @@ body {
     @include desktop {
       font-size: 4rem;
       top: 8%;
+    }
+
+    .homelink {
+      text-decoration: none;
+
+      &:before {
+        content: "(((";
+        position: relative;
+        opacity: 0;
+        transition: all 0.7s;
+        transform: translateX(10px);
+      }
+
+      &:hover:before {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+
+      &:visited {
+        color: $text-color;
+        text-decoration: none;
+      }
     }
   }
 
@@ -255,5 +287,43 @@ body {
     object-fit: cover;
     max-width: 300px;
     max-height: 300px;
+  }
+}
+
+// contact
+
+.contact__container {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 10%;
+  color: $text-color;
+}
+
+.contact__form {
+  .contact__form--fname,
+  .contact__form--lname,
+  .contact__form--email,
+  .contact__form--subject {
+    display: block;
+    width: 50%;
+    padding: 12px;
+    border: 1px solid $nav-color;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type="submit"] {
+    background-color: $text-color;
+    color: $primary-color;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
   }
 }

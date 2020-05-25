@@ -71,7 +71,7 @@ body {
 }
 
 @media (min-width: 1224px) {
-  body {
+  .main {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -156,6 +156,14 @@ body {
   background-color: #55533d;
 }
 
+.nav .nav__link:active:before,
+.nav .nav__link:active:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  background-color: #55533d;
+}
+
 .header {
   padding-top: 20%;
   padding-bottom: 10%;
@@ -192,6 +200,31 @@ body {
     font-size: 4rem;
     top: 8%;
   }
+}
+
+.header .header__title .homelink {
+  text-decoration: none;
+}
+
+.header .header__title .homelink:before {
+  content: "(((";
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.header .header__title .homelink:hover:before {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.header .header__title .homelink:visited {
+  color: #ff7788;
+  text-decoration: none;
 }
 
 .header .headshot__wrap {
@@ -309,4 +342,38 @@ body {
      object-fit: cover;
   max-width: 300px;
   max-height: 300px;
+}
+
+.contact__container {
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 10%;
+  color: #ff7788;
+}
+
+.contact__form .contact__form--fname,
+.contact__form .contact__form--lname,
+.contact__form .contact__form--email,
+.contact__form .contact__form--subject {
+  display: block;
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #3c3f37;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.contact__form input[type="submit"] {
+  background-color: #ff7788;
+  color: #0f1214;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact__form input[type="submit"]:hover {
+  background-color: #45a049;
 }

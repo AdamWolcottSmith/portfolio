@@ -238,10 +238,12 @@ body {
 
 .header .headshot__img {
   width: 90%;
+  height: 90%;
   border-radius: 50%;
   border: 0.1rem solid #3c3f37;
   padding: 0.2rem;
   max-width: 500px;
+  max-height: 500px;
   background-color: #bd37ab;
   -webkit-animation-name: bgmorph;
           animation-name: bgmorph;

@@ -351,12 +351,39 @@ body {
   color: #ff7788;
 }
 
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .contact__form {
+    display: block;
+  }
+}
+
 .contact__form .contact__form--fname,
 .contact__form .contact__form--lname,
 .contact__form .contact__form--email,
 .contact__form .contact__form--subject {
-  display: block;
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 12px;
   border: 1px solid #3c3f37;
   border-radius: 4px;
@@ -365,7 +392,17 @@ body {
   resize: vertical;
 }
 
-.contact__form input[type="submit"] {
+@media (min-width: 768px) {
+  .contact__form .contact__form--fname,
+  .contact__form .contact__form--lname,
+  .contact__form .contact__form--email,
+  .contact__form .contact__form--subject {
+    display: block;
+    width: 75%;
+  }
+}
+
+input[type="submit"] {
   background-color: #ff7788;
   color: #0f1214;
   padding: 12px 20px;
@@ -374,6 +411,142 @@ body {
   cursor: pointer;
 }
 
-.contact__form input[type="submit"]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.bio__about {
+  background-color: #3c3f37;
+  margin: 3rem 0rem 0rem;
+  padding: 1em 2em;
+  color: #ff76b6;
+  text-shadow: 0.1rem 0rem 0.2rem #55533d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0f1214), color-stop(50%, #3c3f37), to(#0f1214));
+  background: linear-gradient(#0f1214 0%, #3c3f37 50%, #0f1214 100%);
+}
+
+.bio__about .bio__about--link {
+  text-decoration: none;
+  color: red;
+}
+
+@media (min-width: 1224px) {
+  .bio__about {
+    font-size: 1.3rem;
+  }
+}
+
+.edu__title {
+  margin: auto;
+  margin-bottom: 1.5em;
+  margin-top: 3.5em;
+  color: #ff7788;
+  text-shadow: 0.1rem 0rem 0.2rem #55533d;
+}
+
+@media (min-width: 1224px) {
+  .edu__title {
+    font-size: 1.7rem;
+  }
+}
+
+.edu__line {
+  margin: 0 4rem;
+}
+
+@media (min-width: 1224px) {
+  .edu__line {
+    margin: 0 12rem;
+  }
+}
+
+.edu__grid {
+  margin: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1.5em;
+  justify-items: center;
+  font-size: 0.8em;
+  color: #ff7788;
+  text-shadow: 0.1rem 0rem 0.2rem #55533d;
+  -webkit-animation-name: txtmorph;
+          animation-name: txtmorph;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@media (min-width: 1224px) {
+  .edu__grid {
+    font-size: 1.5rem;
+  }
+}
+
+.edu__flex {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 0.8em;
+  color: #ff7788;
+  text-shadow: 0.1rem 0rem 0.2rem #55533d;
+  -webkit-animation-name: txtmorph;
+          animation-name: txtmorph;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@media (min-width: 1224px) {
+  .edu__flex {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.edu__grid--bullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 150px;
+}
+
+.edu__grid--about {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.fa-graduation-cap,
+.fa-briefcase,
+.fa-pencil-alt {
+  color: #ff7788;
+  padding-right: 1em;
+  font-size: 1.2em;
+}
+
+.fa-dot-circle {
+  color: #ff7788;
+  padding-right: 1em;
+  padding-top: 0.4em;
+  font-size: 0.8em;
+}
+
+.fa-circle {
+  color: #ff7788;
+  padding-right: 2em;
+  padding-top: 0.4em;
+  font-size: 0.5em;
 }

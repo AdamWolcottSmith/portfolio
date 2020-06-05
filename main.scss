@@ -300,30 +300,154 @@ body {
 }
 
 .contact__form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  @include tablet {
+    display: block;
+  }
+
   .contact__form--fname,
   .contact__form--lname,
   .contact__form--email,
   .contact__form--subject {
-    display: block;
-    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     padding: 12px;
     border: 1px solid $nav-color;
     border-radius: 4px;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
+    @include tablet {
+      display: block;
+      width: 75%;
+    }
+  }
+}
+
+input[type="submit"] {
+  background-color: $text-color;
+  color: $primary-color;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+// about
+
+.bio__about {
+  background-color: $nav-color;
+  margin: 3rem 0rem 0rem;
+  padding: 1em 2em;
+  color: #ff76b6;
+  text-shadow: 0.1rem 0rem 0.2rem $accent-color;
+  background: linear-gradient(
+    $primary-color 0%,
+    $nav-color 50%,
+    $primary-color 100%
+  );
+
+  .bio__about--link {
+    text-decoration: none;
+    color: red;
   }
 
-  input[type="submit"] {
-    background-color: $text-color;
-    color: $primary-color;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  @include desktop {
+    font-size: 1.3rem;
   }
+}
 
-  input[type="submit"]:hover {
-    background-color: #45a049;
+.edu__title {
+  margin: auto;
+  margin-bottom: 1.5em;
+  margin-top: 3.5em;
+  color: $text-color;
+  text-shadow: 0.1rem 0rem 0.2rem $accent-color;
+  @include desktop {
+    font-size: 1.7rem;
   }
+}
+
+.edu__line {
+  margin: 0 4rem;
+  @include desktop {
+    margin: 0 12rem;
+  }
+}
+
+.edu__grid {
+  margin: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5em;
+  justify-items: center;
+  font-size: 0.8em;
+  color: $text-color;
+  text-shadow: 0.1rem 0rem 0.2rem $accent-color;
+  animation-name: txtmorph;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @include desktop {
+    font-size: 1.5rem;
+  }
+}
+
+.edu__flex {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.8em;
+  color: $text-color;
+  text-shadow: 0.1rem 0rem 0.2rem $accent-color;
+  animation-name: txtmorph;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  @include desktop {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.edu__grid--bullet {
+  display: flex;
+  min-width: 150px;
+}
+
+.edu__grid--about {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+// icon styles
+
+.fa-graduation-cap,
+.fa-briefcase,
+.fa-pencil-alt {
+  color: $text-color;
+  padding-right: 1em;
+  font-size: 1.2em;
+}
+
+.fa-dot-circle {
+  color: $text-color;
+  padding-right: 1em;
+  padding-top: 0.4em;
+  font-size: 0.8em;
+}
+
+.fa-circle {
+  color: $text-color;
+  padding-right: 2em;
+  padding-top: 0.4em;
+  font-size: 0.5em;
 }
